@@ -1,0 +1,54 @@
+@import "./scss/_header.scss";
+@import "./scss/_main.scss";
+@import "./scss/_footer.scss";
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #f3f3f3 !important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.iconnewglobal-logo {
+    background-image: url(//cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/homev2/desk/iconnew.webp);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 310px 257px;
+}

@@ -1,0 +1,194 @@
+.header {
+    background-color: #ffd400 !important;
+}
+header {
+    .slider {
+        background-color: #fbf499;
+    }
+
+    .header-center {
+        background-color: #ffd400;
+        height: 40px;
+        margin: 10px 0;
+    }
+
+    .header-logo {
+        background-position: 0 -176px;
+        width: 228px;
+        height: 40px;
+    }
+
+    .header-center .header-address {
+        background-color: #ffbc06 !important;
+        position: relative;
+        border-radius: 4px !important;
+        height: 100%;
+        &::before {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            content: "";
+            position: absolute;
+            top: 43%;
+            right: 7px;
+        }
+
+        .address {
+            text-align: left;
+            font-size: 11px;
+        }
+    }
+    .modal {
+        .modal-header {
+            background-color: #2f80ed;
+            color: #fff;
+            .modal-title {
+                font-size: 14px;
+            }
+        }
+        .search {
+            background-color: #fff;
+            color: #000;
+            padding: 4px;
+            border-radius: 6px;
+            .ico {
+                padding: 2px 5px;
+            }
+            input {
+                outline: none;
+                border: none;
+                width: 100%;
+            }
+        }
+
+        .modal-body .city ul {
+            list-style: none;
+
+            li {
+                padding: 10px;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+
+                &:hover {
+                    background: #e9f4fb;
+
+                    a {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .search {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-radius: 4px;
+        padding: 2px 16px;
+        font-size: 14px;
+
+        input {
+            border: none;
+            margin-bottom: 0 !important;
+            outline: none;
+        }
+    }
+
+    .acc {
+        text-align: center;
+        background-color: #ffbc06;
+        text-decoration: none;
+        width: 96px;
+        height: 46.6px;
+        font-size: 13px;
+        padding: 2px 8px;
+        color: #000;
+        border-radius: 4px;
+    }
+
+    .divitem {
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    .header-bottom {
+        background-color: #ffd400;
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            justify-content: space-between;
+            margin: unset !important;
+            padding: 0;
+            li {
+                cursor: pointer;
+                list-style: none;
+                padding: 10px;
+
+                &:hover {
+                    background-color: #fbf499;
+                    border-radius: 8px 8px 0 0;
+                }
+                img {
+                    width: auto;
+                    height: 20px;
+                    object-fit: cover;
+                    vertical-align: middle;
+                    padding-right: 4px;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: 16px;
+                    vertical-align: middle;
+                }
+            }
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+.bordercol {
+    background-color: #ffe56c;
+    height: 32px;
+    width: 1px;
+}
+
+@media screen and (max-width: 500px) {
+    .header-center {
+        margin: unset;
+        .iconnewglobal-logo {
+            background-position: 0 0;
+            width: 31px;
+            height: 31px;
+        }
+
+        .header-address {
+        }
+        .header-listtop {
+            display: none !important;
+        }
+
+        .acc {
+            display: none;
+        }
+    }
+
+    .header-bottom {
+        display: none;
+    }
+}
