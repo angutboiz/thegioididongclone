@@ -2,10 +2,28 @@
   background-color: #ffd400 !important;
 }
 
-header .slider {
-  background-color: #fbf499;
+header .mobile-responsive {
+  display: none;
+}
+header .pc-reponsive {
+  display: block;
+}
+header .header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+header .header-listtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
 }
 header .header-center {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   background-color: #ffd400;
   height: 40px;
   margin: 10px 0;
@@ -34,44 +52,6 @@ header .header-center .header-address .address {
   text-align: left;
   font-size: 11px;
 }
-header .modal .modal-header {
-  background-color: #2f80ed;
-  color: #fff;
-}
-header .modal .modal-header .modal-title {
-  font-size: 14px;
-}
-header .modal .search {
-  background-color: #fff;
-  color: #000;
-  padding: 4px;
-  border-radius: 6px;
-}
-header .modal .search .ico {
-  padding: 2px 5px;
-}
-header .modal .search input {
-  outline: none;
-  border: none;
-  width: 100%;
-}
-header .modal .modal-body .city ul {
-  list-style: none;
-}
-header .modal .modal-body .city ul li {
-  padding: 10px;
-  cursor: pointer;
-}
-header .modal .modal-body .city ul li a {
-  text-decoration: none;
-  color: #000;
-}
-header .modal .modal-body .city ul li:hover {
-  background: #e9f4fb;
-}
-header .modal .modal-body .city ul li:hover a {
-  color: red;
-}
 header .search {
   background-color: #fff;
   display: flex;
@@ -90,12 +70,23 @@ header .acc {
   text-align: center;
   background-color: #ffbc06;
   text-decoration: none;
-  width: 96px;
+  width: 100px;
   height: 46.6px;
   font-size: 13px;
   padding: 2px 8px;
   color: #000;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .acc i {
+  background-position: -48px 0;
+  width: 25px;
+  height: 24px;
+}
+header .acc b {
+  margin-left: 3px;
 }
 header .divitem {
   text-align: center;
@@ -106,6 +97,7 @@ header .divitem a {
 }
 header .header-bottom {
   background-color: #ffd400;
+  width: 100%;
 }
 header .header-bottom ul {
   display: flex;
@@ -138,6 +130,9 @@ header .header-bottom ul li span {
 }
 header .header-bottom ul a {
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bordercol {
@@ -147,26 +142,94 @@ header .header-bottom ul a {
 }
 
 @media screen and (max-width: 500px) {
-  .header-center {
-    margin: unset;
+  .mobile-responsive {
+    display: block !important;
   }
-  .header-center .iconnewglobal-logo {
+  .pc-reponsive {
+    display: none !important;
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mobile .branch {
     background-position: 0 0;
     width: 31px;
     height: 31px;
   }
-  .header-center .header-listtop {
-    display: none !important;
+  .mobile .cart {
+    background-position: -48px 0;
+    width: 25px;
+    height: 24px;
   }
-  .header-center .acc {
-    display: none;
+  .mobile .menu {
+    background-position: -77px 0;
+    width: 26px;
+    height: 26px;
   }
-  .header-bottom {
-    display: none;
+  .mobile .address {
+    font-size: 12px;
+  }
+  .mobile .address i {
+    margin-right: 5px;
+    color: #fff;
+  }
+  .mobile .header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile .order-and-acc {
+    font-size: 13px;
+  }
+  .mobile .header-input {
+    width: 100%;
+    display: flex;
+  }
+  .mobile .header-input input {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+  }
+  .mobile .header-input i {
+    background-color: #fff;
+    border-radius: 0 8px 8px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #333;
+  }
+  .mobile .header-bottom {
+    font-size: 13px;
+    margin: 10px 0 20px;
+  }
+  .mobile .header-bottom ul li {
+    margin: unset;
+    padding: unset;
   }
 }
 .bannertopzone-home {
   margin-bottom: 10px;
+}
+
+.big-banner {
+  height: 440px;
+}
+.big-banner img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bg-tophome {
@@ -655,6 +718,22 @@ header .header-bottom ul a {
 .col2-tech .container {
   padding: 0;
 }
+.col2-tech .technology {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col2-tech .new-tech {
+  display: flex;
+  justify-content: space-between;
+}
+.col2-tech .new-tech .tech-box {
+  width: 270px;
+  margin-right: 10px;
+}
+.col2-tech .new-tech .tech-box img {
+  border-radius: 10px;
+}
 .col2-tech .tech-new {
   background-color: #fff;
   border-radius: 12px;
@@ -689,14 +768,6 @@ header .header-bottom ul a {
   .main {
     transform: translateY(-8px);
   }
-  .big-banner {
-    background: url("../../img/Banner-Big---TGDD-MB-min-720x1100-4.webp") no-repeat center;
-    height: 920px;
-    width: 100%;
-  }
-  .big-banner img {
-    display: none;
-  }
   .shopping-trends .container {
     padding: 0 0 20px 0;
   }
@@ -729,8 +800,8 @@ header .header-bottom ul a {
     padding: 10px;
   }
   .banner-img {
-    height: 104px;
     width: 100%;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 8px;
@@ -765,10 +836,53 @@ header .header-bottom ul a {
   .grid-item {
     grid-template-columns: auto auto !important;
   }
+  .trademark .container,
+  .bottom-search .container {
+    padding: 10px !important;
+  }
+  .col2-tech .technology {
+    display: block;
+  }
+  .col2-tech .technology .tech-box {
+    width: 100%;
+  }
+  .col2-tech .new-tech {
+    display: flex;
+    flex-direction: column;
+  }
+  .col2-tech .new-tech .tech-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .col2-tech .new-tech .tech-box img {
+    width: 140px;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+  .col2-tech .tech-banner img {
+    display: none;
+  }
+}
+footer {
+  font-size: 16px;
+  color: #000;
+}
+footer .container {
+  padding: 20px 10px;
+}
+footer ul {
+  padding: 0;
 }
 footer ul li span {
   color: #2f80ed;
   font-weight: bold;
+}
+footer .icon-branch {
+  display: flex;
+  justify-content: space-between;
+}
+footer .icon-branch li i {
+  margin-right: 2px;
 }
 
 .fb {
@@ -793,6 +907,90 @@ footer ul li span {
   width: 79px;
 }
 
+.icon-khieunai {
+  background-position: -250px 0;
+  height: 25px;
+  width: 25px;
+}
+
+.icon-protected {
+  background-position: -80px -60px;
+  height: 24px;
+  width: 122px;
+}
+
+.tinnhiemmang img {
+  width: 85px;
+}
+
+.icon-logo {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-logo div {
+  margin-right: 10px;
+}
+
+.logo-website div {
+  margin: 5px;
+}
+
+.iconlogo-topzone {
+  background-position: 0 -58px;
+}
+
+.iconlogo-dienmayxanh {
+  background-position: -111px 0;
+}
+
+.iconlogo-bachhoaxanh {
+  background-position: -215px 0;
+}
+
+.iconlogo-ankhang {
+  background-position: -116px -90px;
+}
+
+.iconlogo-kids {
+  background-position: -111px -120px;
+}
+
+.iconlogo-tantam {
+  background-position: -215px -90px;
+}
+
+.iconlogo-4kfarm {
+  background-position: 0 -90px;
+}
+
+.iconlogo-vieclam {
+  background-position: -9px -121px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-top .footer-col:not(:nth-child(4)) {
+  margin-right: 10px;
+}
+.footer-top .footer-col:nth-child(4) {
+  width: 30%;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-top .footer-col:nth-child(1),
+  .footer-top .footer-col:nth-child(2) {
+    display: none;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .footer-top .footer-col:nth-child(4) {
+    width: unset;
+  }
+}
 ul {
   list-style: none;
 }
@@ -846,4 +1044,24 @@ a {
   line-height: 30px;
   vertical-align: middle;
   background-size: 310px 257px;
+}
+
+.iconglobalcheck-logo {
+  background-image: url(//cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/homev2/desk/icon_common@2x.webp);
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 300px 200px;
+}
+
+.website-logo {
+  background-image: url(//cdn.tgdd.vn/mwgcart/mwgcore/ContentMwg/images/DMX/Global/Desktop/Logo-webmoi.webp);
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 300px 200px;
+  height: 24px;
+  width: 80px;
 }/*# sourceMappingURL=global.css.map */

@@ -1,6 +1,16 @@
 .bannertopzone-home {
     margin-bottom: 10px;
 }
+
+.big-banner {
+    height: 440px;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .bg-tophome {
     transform: translateY(-70px);
     .owl-theme img {
@@ -564,6 +574,25 @@
     .container {
         padding: 0;
     }
+    .technology {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .new-tech {
+        display: flex;
+        justify-content: space-between;
+
+        .tech-box {
+            width: 270px;
+            margin-right: 10px;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
 
     .tech-new {
         background-color: #fff;
@@ -603,14 +632,6 @@
 @media screen and (max-width: 500px) {
     .main {
         transform: translateY(-8px);
-    }
-    .big-banner {
-        background: url("../../img/Banner-Big---TGDD-MB-min-720x1100-4.webp") no-repeat center;
-        height: 920px;
-        width: 100%;
-        img {
-            display: none;
-        }
     }
 
     .shopping-trends {
@@ -655,8 +676,8 @@
     }
 
     .banner-img {
-        height: 104px;
         width: 100%;
+        height: auto;
         object-fit: cover;
         border-radius: 8px;
     }
@@ -701,5 +722,38 @@
 
     .grid-item {
         grid-template-columns: auto auto !important;
+    }
+
+    .trademark .container,
+    .bottom-search .container {
+        padding: 10px !important;
+    }
+
+    .col2-tech {
+        .technology {
+            display: block;
+
+            .tech-box {
+                width: 100%;
+            }
+        }
+        .new-tech {
+            display: flex;
+            flex-direction: column;
+
+            .tech-box {
+                display: flex;
+                margin-bottom: 10px;
+
+                img {
+                    width: 140px;
+                    border-radius: 8px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .tech-banner img {
+            display: none;
+        }
     }
 }

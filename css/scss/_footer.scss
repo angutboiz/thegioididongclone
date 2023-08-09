@@ -1,7 +1,27 @@
 footer {
+    font-size: 16px;
+    color: #000;
+    .container {
+        padding: 20px 10px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
     ul li span {
         color: #2f80ed;
         font-weight: bold;
+    }
+
+    .icon-branch {
+        display: flex;
+        justify-content: space-between;
+        li {
+            i {
+                margin-right: 2px;
+            }
+        }
     }
 }
 
@@ -25,4 +45,90 @@ footer {
     background-position: -200px -30px;
     height: 24px;
     width: 79px;
+}
+
+.icon-khieunai {
+    background-position: -250px 0;
+    height: 25px;
+    width: 25px;
+}
+
+.icon-protected {
+    background-position: -80px -60px;
+    height: 24px;
+    width: 122px;
+}
+
+.tinnhiemmang img {
+    width: 85px;
+}
+
+.icon-logo {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        margin-right: 10px;
+    }
+}
+
+.logo-website div {
+    margin: 5px;
+}
+
+.iconlogo-topzone {
+    background-position: 0 -58px;
+}
+
+.iconlogo-dienmayxanh {
+    background-position: -111px 0;
+}
+
+.iconlogo-bachhoaxanh {
+    background-position: -215px 0;
+}
+
+.iconlogo-ankhang {
+    background-position: -116px -90px;
+}
+
+.iconlogo-kids {
+    background-position: -111px -120px;
+}
+.iconlogo-tantam {
+    background-position: -215px -90px;
+}
+
+.iconlogo-4kfarm {
+    background-position: 0 -90px;
+}
+.iconlogo-vieclam {
+    background-position: -9px -121px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .footer-col:not(:nth-child(4)) {
+        margin-right: 10px;
+    }
+
+    .footer-col:nth-child(4) {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-top .footer-col:nth-child(1),
+    .footer-top .footer-col:nth-child(2) {
+        display: none;
+    }
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-top .footer-col:nth-child(4) {
+        width: unset;
+    }
 }
