@@ -2,6 +2,14 @@
   background-color: #ffd400 !important;
 }
 
+.nav-overlay {
+  display: none;
+}
+
+.nav-input {
+  display: none;
+}
+
 header .mobile-responsive {
   display: none;
 }
@@ -217,6 +225,84 @@ header .header-bottom ul a {
   .mobile .header-bottom ul li {
     margin: unset;
     padding: unset;
+  }
+  .mobile .header-bottom ul li:hover {
+    background-color: unset;
+    border-radius: unset;
+  }
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    height: 100%;
+    padding: 30px 15px;
+    transform: translateX(100%);
+    transition: transform linear 0.2s;
+  }
+  .nav-overlay .header-overlay {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  .nav-overlay .header-overlay label {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #333;
+    float: right;
+    padding: 7px 10px;
+    text-align: right;
+  }
+  .nav-overlay .nav-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 1s ease-in;
+  }
+  .nav-overlay .nav-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(20% - 5px);
+    padding: 4px 2px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  .nav-overlay .show-menu {
+    margin: 10px 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  .nav-overlay .show-menu .link-item {
+    width: 50%;
+    margin-right: 10px;
+  }
+  .nav-overlay .show-menu .link-item p {
+    font-weight: 600;
+    margin-bottom: unset;
+  }
+  .nav-overlay .show-menu .link-item ul {
+    padding: unset;
+    font-size: 13px;
+  }
+  .nav-overlay .show-menu .link-item ul li:not(:nth-child(3)) {
+    border-bottom: 1px solid #ccc;
+  }
+  .nav-overlay .show-menu .link-item ul li {
+    padding: 7px 0;
+  }
+  .nav-overlay .txt {
+    margin-bottom: 1rem;
+  }
+  .nav-input:checked ~ .nav-overlay {
+    transform: translateX(0px);
   }
 }
 .bannertopzone-home {
