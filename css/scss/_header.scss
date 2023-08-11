@@ -8,6 +8,70 @@
     display: none;
 }
 header {
+    .modal {
+        margin: 150px auto;
+
+        .modal-header {
+            flex-direction: column;
+            background-color: #2f80ed;
+            color: #fff;
+            font-size: 14px;
+
+            .default-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                .modal-title {
+                    width: 80%;
+                }
+            }
+
+            .search {
+                margin-top: 10px;
+                width: 100%;
+                padding: 5px 8px;
+
+                i {
+                    color: #000;
+                    font-size: 20px;
+                }
+                input {
+                    width: 98%;
+                    padding: 5px;
+                }
+            }
+        }
+        .modal-body {
+            .city {
+                display: flex;
+
+                ul li {
+                    padding: 8px;
+                    a {
+                        color: #000;
+                    }
+                    &:hover {
+                        background-color: #e9f4fb;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .close {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 6px 15px;
+            border-radius: 4px;
+            &:hover {
+                background-color: #363535;
+                border: 1px solid #363535;
+            }
+        }
+    }
+
     .mobile-responsive {
         display: none;
     }
@@ -49,8 +113,8 @@ header {
         position: relative;
         border-radius: 4px !important;
         height: 100%;
-        width: 135px;
-        padding: 2px 8px;
+        width: 130px;
+        padding: 2px 5px;
         &::before {
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
@@ -76,6 +140,7 @@ header {
         border-radius: 4px;
         padding: 2px 16px;
         font-size: 14px;
+        width: 25%;
 
         input {
             border: none;
@@ -88,7 +153,7 @@ header {
         text-align: center;
         background-color: #ffbc06;
         text-decoration: none;
-        width: 100px;
+        width: 120px;
         height: 100%;
         font-size: 13px;
         padding: 2px 8px;
@@ -102,6 +167,7 @@ header {
             background-position: -48px 0;
             width: 25px;
             height: 24px;
+            margin-right: 4px;
         }
         b {
             margin-left: 3px;
@@ -173,6 +239,7 @@ header {
     .pc-reponsive {
         display: none !important;
     }
+
     .mobile {
         display: flex;
         justify-content: space-between;
