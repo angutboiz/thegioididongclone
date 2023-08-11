@@ -38,16 +38,67 @@
                         <div class="header-center">
                             <a href="#" class="navbar-branch header-logo iconnewglobal-logo"></a>
                             <div class="header-address">
-                                <button class="address">
+                                <button class="address" data-toggle="modal" data-target="#exampleModal">
                                     Xem giá, tồn kho tại: <br />
                                     <b>Hồ Chí Minh</b>
                                 </button>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="default-title">
+                                                    <p class="modal-title" id="exampleModalLabel">Quý khách vui lòng cho biết <b>Địa Chỉ Nhận Hàng</b> để biết chính xác thời gian giao hàng</p>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times; Đóng</span>
+                                                    </button>
+                                                </div>
+                                                <div class="search">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <input type="text" placeholder="Tìm nhanh tỉnh thành, quận huyện, phường xã" />
+                                                </div>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6 class="text-center mb-2">Hoặc chọn tỉnh, thành phố</h6>
+                                                <div class="city">
+                                                    <div class="left w-50">
+                                                        <ul class="p-0">
+                                                            <li><a href="#"> Hồ Chí Minh </a></li>
+                                                            <li><a href="#">Đà Nẵng</a></li>
+                                                            <li><a href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                            <li><a href="#">Bắc Kạn</a></li>
+                                                            <li><a href="#">Bắc Ninh</a></li>
+                                                            <li><a href="#">Kiên Giang</a></li>
+                                                            <li><a href="#">Vĩnh Long</a></li>
+                                                            <li><a href="#">Quảng Bình</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="right w-50">
+                                                        <ul class="p-0">
+                                                            <li><a href="#">Hà Nội</a></li>
+                                                            <li><a href="#">Bạc Liêu</a></li>
+                                                            <li><a href="#">Đồng Nai</a></li>
+                                                            <li><a href="#">Hà Giang</a></li>
+                                                            <li><a href="#">Khánh Hòa</a></li>
+                                                            <li><a href="#">Phú Thọ</a></li>
+                                                            <li><a href="#">Tuyên Quang</a></li>
+                                                            <li><a href="#">Vĩnh Phúc</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="search">
                                 <input type="text" placeholder="Bạn tìm gì..." />
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <a href="#" class="acc">Tài khoản & Đơn hàng</a>
+                            <a href="#" class="acc"
+                                >Tài khoản & <br />
+                                Đơn hàng</a
+                            >
                             <div class="acc">
                                 <i class="iconnewglobal-logo"></i>
                                 <b>Giỏ hàng</b>
@@ -107,7 +158,54 @@
                 <div class="container mobile">
                     <div class="header-top">
                         <div class="branch iconnewglobal-logo"></div>
-                        <div class="address"><i class="fa-solid fa-location-dot"></i>Hồ Chí Minh</div>
+                        <div class="address" data-toggle="modal" data-target="#modalMobile"><i class="fa-solid fa-location-dot"></i>Hồ Chí Minh</div>
+                        <div class="modal fade" id="modalMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="default-title">
+                                            <p class="modal-title" id="exampleModalLabel">Quý khách vui lòng cho biết <b>Địa Chỉ Nhận Hàng</b> để biết chính xác thời gian giao hàng</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times; Đóng</span>
+                                            </button>
+                                        </div>
+                                        <div class="search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="text" placeholder="Tìm nhanh tỉnh thành, quận huyện, phường xã" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6 class="text-center mb-2">Hoặc chọn tỉnh, thành phố...</h6>
+                                        <div class="city">
+                                            <div class="left w-50">
+                                                <ul class="p-0">
+                                                    <li><a href="#"> Hồ Chí Minh </a></li>
+                                                    <li><a href="#">Đà Nẵng</a></li>
+                                                    <li><a href="#">Bà Rịa - Vũng Tàu</a></li>
+                                                    <li><a href="#">Bắc Kạn</a></li>
+                                                    <li><a href="#">Bắc Ninh</a></li>
+                                                    <li><a href="#">Kiên Giang</a></li>
+                                                    <li><a href="#">Vĩnh Long</a></li>
+                                                    <li><a href="#">Quảng Bình</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="right w-50">
+                                                <ul class="p-0">
+                                                    <li><a href="#">Hà Nội</a></li>
+                                                    <li><a href="#">Bạc Liêu</a></li>
+                                                    <li><a href="#">Đồng Nai</a></li>
+                                                    <li><a href="#">Hà Giang</a></li>
+                                                    <li><a href="#">Khánh Hòa</a></li>
+                                                    <li><a href="#">Phú Thọ</a></li>
+                                                    <li><a href="#">Tuyên Quang</a></li>
+                                                    <li><a href="#">Vĩnh Phúc</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="order-and-acc">Tài khoản & <br />Đơn hàng</div>
                         <div class="cart iconnewglobal-logo"></div>
                         <label for="nav-overlay" class="menu iconnewglobal-logo"></label>
@@ -191,7 +289,7 @@
 
         <section class="main">
             <div class="big-banner">
-                <img class="img-fluid" src="./img/TGDD-DESK--8--1920x450.webp" alt="" />
+                <img class="" src="./img/TGDD-DESK--8--1920x450.webp" alt="" />
             </div>
             <div class="bg-tophome">
                 <div class="container">
