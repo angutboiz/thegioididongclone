@@ -757,3 +757,38 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .col2-tech {
+        .technology {
+            display: block;
+
+            .tech-box {
+                width: 100%;
+            }
+        }
+        .new-tech {
+            display: flex;
+            flex-direction: column;
+
+            .tech-box {
+                display: flex;
+                margin-bottom: 10px;
+
+                img {
+                    width: 140px;
+                    border-radius: 8px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .tech-banner img {
+            display: none;
+        }
+    }
+    .pc-reponsive {
+        .header-center .header-listtop {
+            display: none;
+        }
+    }
+}

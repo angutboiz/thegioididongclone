@@ -49,6 +49,8 @@ header {
         position: relative;
         border-radius: 4px !important;
         height: 100%;
+        width: 135px;
+        padding: 2px 8px;
         &::before {
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
@@ -87,7 +89,7 @@ header {
         background-color: #ffbc06;
         text-decoration: none;
         width: 100px;
-        height: 46.6px;
+        height: 100%;
         font-size: 13px;
         padding: 2px 8px;
         color: #000;

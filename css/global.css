@@ -46,6 +46,8 @@ header .header-center .header-address {
   position: relative;
   border-radius: 4px !important;
   height: 100%;
+  width: 135px;
+  padding: 2px 8px;
 }
 header .header-center .header-address::before {
   border-left: 5px solid transparent;
@@ -79,7 +81,7 @@ header .acc {
   background-color: #ffbc06;
   text-decoration: none;
   width: 100px;
-  height: 46.6px;
+  height: 100%;
   font-size: 13px;
   padding: 2px 8px;
   color: #000;
@@ -946,6 +948,33 @@ header .header-bottom ul a {
     margin-right: 5px;
   }
   .col2-tech .tech-banner img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .col2-tech .technology {
+    display: block;
+  }
+  .col2-tech .technology .tech-box {
+    width: 100%;
+  }
+  .col2-tech .new-tech {
+    display: flex;
+    flex-direction: column;
+  }
+  .col2-tech .new-tech .tech-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .col2-tech .new-tech .tech-box img {
+    width: 140px;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+  .col2-tech .tech-banner img {
+    display: none;
+  }
+  .pc-reponsive .header-center .header-listtop {
     display: none;
   }
 }
