@@ -1,6 +1,7 @@
 @import "./scss/_header.scss";
 @import "./scss/_main.scss";
 @import "./scss/_footer.scss";
+@import "./scss/_etc.scss";
 
 ul {
     list-style: none;
@@ -71,4 +72,13 @@ a {
     background-size: 300px 200px;
     height: 24px;
     width: 80px;
+}
+
+.input-icon {
+    background-image: url(https://cdn.tgdd.vn/mwgcart/orderhistory/images/2022/icons@2022.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 490px 224px;
 }

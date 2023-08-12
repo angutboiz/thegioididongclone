@@ -10,6 +10,60 @@
   display: none;
 }
 
+header .modal {
+  margin: 150px auto;
+}
+header .modal .modal-header {
+  flex-direction: column;
+  background-color: #2f80ed;
+  color: #fff;
+  font-size: 14px;
+}
+header .modal .modal-header .default-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .modal .modal-header .default-title .modal-title {
+  width: 80%;
+}
+header .modal .modal-header .search {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 8px;
+}
+header .modal .modal-header .search i {
+  color: #000;
+  font-size: 20px;
+}
+header .modal .modal-header .search input {
+  width: 98%;
+  padding: 5px;
+}
+header .modal .modal-body .city {
+  display: flex;
+}
+header .modal .modal-body .city ul li {
+  padding: 8px;
+}
+header .modal .modal-body .city ul li a {
+  color: #000;
+}
+header .modal .modal-body .city ul li:hover {
+  background-color: #e9f4fb;
+  cursor: pointer;
+}
+header .modal .close {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 4px;
+}
+header .modal .close:hover {
+  background-color: #363535;
+  border: 1px solid #363535;
+}
 header .mobile-responsive {
   display: none;
 }
@@ -46,8 +100,8 @@ header .header-center .header-address {
   position: relative;
   border-radius: 4px !important;
   height: 100%;
-  width: 135px;
-  padding: 2px 8px;
+  width: 130px;
+  padding: 2px 5px;
 }
 header .header-center .header-address::before {
   border-left: 5px solid transparent;
@@ -70,6 +124,7 @@ header .search {
   border-radius: 4px;
   padding: 2px 16px;
   font-size: 14px;
+  width: 25%;
 }
 header .search input {
   border: none;
@@ -80,7 +135,7 @@ header .acc {
   text-align: center;
   background-color: #ffbc06;
   text-decoration: none;
-  width: 100px;
+  width: 120px;
   height: 100%;
   font-size: 13px;
   padding: 2px 8px;
@@ -94,6 +149,7 @@ header .acc i {
   background-position: -48px 0;
   width: 25px;
   height: 24px;
+  margin-right: 4px;
 }
 header .acc b {
   margin-left: 3px;
@@ -108,6 +164,80 @@ header .divitem a {
 header .header-bottom {
   background-color: #ffd400;
   width: 100%;
+}
+header .header-bottom .has-list {
+  position: relative;
+}
+header .header-bottom .has-list:hover .navmwg {
+  display: grid;
+}
+header .header-bottom .has-list:hover .navmwg.limit-width {
+  width: 160px;
+  display: block;
+}
+header .header-bottom .has-list .navmwg {
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 43px;
+  width: 770px;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+  border: 1px solid #eee;
+  left: 0;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(4, auto);
+}
+header .header-bottom .has-list .navmwg::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 40px;
+  border-bottom: 10px solid #d9d9d9;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom-color: #fff;
+}
+header .header-bottom .has-list .navmwg strong {
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+header .header-bottom .has-list .navmwg a {
+  display: unset;
+}
+header .header-bottom .has-list .navmwg a:hover h3 {
+  background-color: #e0e8e9;
+}
+header .header-bottom .has-list .navmwg a h3 {
+  display: block;
+  font-weight: 400;
+  color: #000;
+  font-size: 14px;
+}
+header .header-bottom .has-list .show-left {
+  right: 0;
+  left: unset;
+}
+header .header-bottom .has-list .show-left::before {
+  left: unset;
+  right: 40px;
+}
+header .header-bottom .has-child::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 6px solid #333;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 header .header-bottom ul {
   display: flex;
@@ -321,13 +451,17 @@ header .header-bottom ul a {
 }
 
 .bg-tophome {
-  transform: translateY(-70px);
+  transform: translateY(-50%);
 }
 .bg-tophome .owl-theme img {
   border-radius: 10px;
 }
 .bg-tophome .row {
   max-width: unset;
+}
+.bg-tophome .owl-item {
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .main .hotdeal .row,
@@ -692,6 +826,9 @@ header .header-bottom ul a {
 }
 .daily-sg .name-box {
   padding-left: 0;
+}
+.daily-sg .option-sg .nav {
+  justify-content: space-between;
 }
 .daily-sg .option-sg .nav-tabs .nav-item.show .nav-link,
 .daily-sg .option-sg .nav-tabs .nav-link.active {
@@ -1106,6 +1243,63 @@ footer .icon-branch li i {
     width: unset;
   }
 }
+.wrapper {
+  margin: 30px 0;
+}
+.wrapper .login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 564px;
+}
+.wrapper .login .step1 {
+  padding: 85px 99px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.11);
+  background-color: #fff;
+}
+.wrapper .login .step1 span {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  display: block;
+}
+.wrapper .login .step1 .input-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+}
+.wrapper .login .step1 .input-area i {
+  background-position: -66px -19px;
+  width: 14px;
+  height: 21px;
+  margin: 0 20px;
+}
+.wrapper .login .step1 .input-area input {
+  width: 90%;
+  border: none;
+  outline: none;
+  height: 48px;
+}
+.wrapper .login .step1 button {
+  background-color: #f96f3a;
+  border-radius: 100px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 17px;
+  max-width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -1179,4 +1373,13 @@ a {
   background-size: 300px 200px;
   height: 24px;
   width: 80px;
+}
+
+.input-icon {
+  background-image: url(https://cdn.tgdd.vn/mwgcart/orderhistory/images/2022/icons@2022.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  background-size: 490px 224px;
 }/*# sourceMappingURL=global.css.map */

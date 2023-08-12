@@ -185,6 +185,91 @@ header {
     .header-bottom {
         background-color: #ffd400;
         width: 100%;
+
+        .has-list {
+            position: relative;
+
+            &:hover .navmwg {
+                display: grid;
+            }
+
+            &:hover .navmwg.limit-width {
+                width: 160px;
+                display: block;
+            }
+
+            .navmwg {
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    bottom: 100%;
+                    left: 40px;
+                    border-bottom: 10px solid #d9d9d9;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom-color: #fff;
+                }
+
+                display: none;
+                position: absolute;
+                background: #fff;
+                top: 43px;
+                width: 770px;
+                border-radius: 4px;
+                padding: 10px;
+                z-index: 10;
+                border: 1px solid #eee;
+                left: 0;
+                grid-auto-rows: minmax(min-content, max-content);
+                grid-template-columns: repeat(4, auto);
+
+                strong {
+                    border-bottom: 1px solid #ccc;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+
+                a {
+                    display: unset;
+                    &:hover h3 {
+                        background-color: #e0e8e9;
+                    }
+                }
+
+                a h3 {
+                    display: block;
+                    font-weight: 400;
+                    color: #000;
+                    font-size: 14px;
+                }
+            }
+            .show-left {
+                right: 0;
+                left: unset;
+
+                &::before {
+                    left: unset;
+                    right: 40px;
+                }
+            }
+        }
+
+        .has-child::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 6px solid #333;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
         ul {
             display: flex;
             align-items: center;
